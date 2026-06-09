@@ -4,7 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Importancia do agro</title>
-    
+    body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 50px;
+            overflow-x: hidden;
+        }
+        
+        h1 {
+            color: #71E86B; /* Verde claro */
+            font-size: 55px;
+            text-transform: uppercase;
+            font-family: 'Impact', sans-serif; /* Fonte mais grossa e reta */
+            /* Simulando a borda preta grossa da imagem */
+            text-shadow:
+                -2px -2px 0 #000,
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000,
+                 0px  3px 0 #000; 
+            margin-bottom: 60px;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        /* Criando o efeito de fotos Polaroid */
+        .galeria img {
+            width: 220px;
+            height: 280px;
+            object-fit: cover;
+            background-color: #f4f4f0;
+            padding: 10px 10px 40px 10px; /* Bordas desiguais (maior embaixo) */
+            border: 1px solid #ccc;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+            margin: -20px; /* Faz as imagens se sobreporem um pouco */
+        }
+
+
+        .galeria img:nth-child(1) { transform: rotate(-15deg); z-index: 1;}
+        .galeria img:nth-child(2) { transform: rotate(-5deg); z-index: 2; }
+        .galeria img:nth-child(3) { transform: rotate(5deg); z-index: 3; }
+        .galeria img:nth-child(4) { transform: rotate(15deg); z-index: 4; }
+
+        /* Estilo do botão */
+        .btn-proximo {
+            background-color: #71E86B;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px 40px;
+            border: 6px solid black;
+            border-radius: 20px; /* Deixa o botão arredondado */
+            cursor: pointer;
+            box-shadow: 4px 4px 0px black; /* Dá o efeito de profundidade sólido */
+        }
    
 </head>
 <body>
