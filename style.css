@@ -1,18 +1,31 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #ffffff;
+    background-color: transparent; /* O fundo agora é transparente para o vídeo aparecer */
     margin: 0;
     padding: 50px;
     overflow-x: hidden;
 }
 
+/* --- ESTE É O CÓDIGO NOVO DO VÍDEO --- */
+.video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+    pointer-events: none; 
+    filter: blur(12px); 
+    transform: scale(1.15); 
+}
+
+/* --- DAQUI PARA BAIXO É O SEU CÓDIGO ANTIGO QUE FOI MANTIDO --- */
 h1 {
-    color: #71E86B; /* Verde claro */
+    color: #71E86B; 
     font-size: 55px;
     text-transform: uppercase;
-    font-family: 'Impact', sans-serif; /* Fonte mais grossa e reta */
-    /* Simulando a borda preta grossa da imagem */
+    font-family: 'Impact', sans-serif; 
     text-shadow:
         -2px -2px 0 #000,
          2px -2px 0 #000,
@@ -29,16 +42,15 @@ h1 {
     margin-bottom: 50px;
 }
 
-/* Criando o efeito de fotos Polaroid */
 .galeria img {
-    width: 220px;
-    height: 280px;
+    width: 320px; /* Mantive os tamanhos maiores que conversamos */
+    height: 400px;
     object-fit: cover;
     background-color: #f4f4f0;
-    padding: 10px 10px 40px 10px; /* Bordas desiguais (maior embaixo) */
+    padding: 10px 10px 40px 10px; 
     border: 1px solid #ccc;
     box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
-    margin: -20px; /* Faz as imagens se sobreporem um pouco */
+    margin: -20px; 
 }
 
 .galeria img:nth-child(1) { transform: rotate(-15deg); z-index: 1;}
@@ -46,7 +58,6 @@ h1 {
 .galeria img:nth-child(3) { transform: rotate(5deg); z-index: 3; }
 .galeria img:nth-child(4) { transform: rotate(15deg); z-index: 4; }
 
-/* Estilo do botão */
 .btn-proximo {
     background-color: #71E86B;
     color: white;
@@ -54,7 +65,7 @@ h1 {
     font-weight: bold;
     padding: 20px 40px;
     border: 6px solid black;
-    border-radius: 20px; /* Deixa o botão arredondado */
+    border-radius: 20px; 
     cursor: pointer;
-    box-shadow: 4px 4px 0px black; /* Dá o efeito de profundidade sólido */
+    box-shadow: 4px 4px 0px black; 
 }
