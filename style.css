@@ -1,10 +1,16 @@
+/* --- CONFIGURAÇÕES GERAIS DO SITE --- */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: transparent; /* O fundo agora é transparente para o vídeo aparecer */
+    background-color: transparent; 
     margin: 0;
-    padding: 50px;
+    padding: 0; /* Removido daqui para a página 2 conseguir cobrir as bordas */
     overflow-x: hidden;
+}
+
+/* O espaçamento protetor de 50px agora fica apenas na Tela 1 */
+#home {
+    padding: 50px;
 }
 
 /* --- CONFIGURAÇÃO DO VÍDEO DE FUNDO --- */
@@ -20,7 +26,7 @@ body {
     transform: scale(1.35); 
 }
 
-/* --- TELA 1: ESTILOS DA PÁGINA INICIAL --- */
+/* --- TELA 1: ELEMENTOS DA PÁGINA INICIAL --- */
 h1 {
     color: #71E86B; 
     font-size: 55px;
@@ -70,14 +76,80 @@ h1 {
     box-shadow: 4px 4px 0px black; 
 }
 
-/* --- CLASSE QUE O JAVASCRIPT USA PARA ESCONDER AS TELAS --- */
+/* --- AUXILIAR DO JAVASCRIPT --- */
 .escondida {
     display: none !important;
 }
 
-/* --- TELA 2: ESTILOS DA NOVA PÁGINA (SECTION) --- */
+/* --- TELA 2: ESTILOS DA SEGUNDA PÁGINA (CONTEÚDO AZUL) --- */
 #secao-definicoes {
-    background-color: #8da9c4; /* O azul exato dos seus slides */
+    background-color: #8da9c4; /* O azul de preenchimento total */
     min-height: 100vh;
+    width: 100%;
     margin: 0;
     padding: 0;
+    color: white; /* Força todas as fontes a serem brancas */
+    position: relative;
+    z-index: 5; /* Joga a página para cima do vídeo fixo, tampando-o */
+}
+
+/* Mosaico posicionado perfeitamente no topo */
+.topo-mosaico {
+    width: 100%;
+    background-color: #8da9c4;
+    display: flex;
+    justify-content: center;
+}
+
+.img-mosaico {
+    width: 100%;
+    max-width: 1920px; /* Evita que estique excessivamente em monitores gigantes */
+    height: auto;
+    display: block;
+}
+
+/* Container de textos */
+.conteudo-definicoes {
+    padding: 60px 12% 100px 12%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Alinhamento do slide */
+}
+
+/* 1º maior texto da página */
+.titulo-principal-agro {
+    font-size: 75px; 
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 50px;
+    color: white;
+}
+
+/* 2º maior texto da página */
+.titulo-agricultura {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* Explicação (um pouco menor que o título de agricultura) */
+.texto-explicacao p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* Referências bem pequenas lá embaixo */
+.referencias-pequenas {
+    margin-top: 70px;
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0.85;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    color: white;
+}
