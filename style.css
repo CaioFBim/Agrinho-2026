@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- ESTE É O CÓDIGO NOVO DO VÍDEO --- */
+/* --- ESTE É O CÓDIGO DO VÍDEO COM O DESFOQUE E ZOOM AJUSTADOS --- */
 .video-fundo {
     position: fixed;
     top: 0;
@@ -16,11 +16,15 @@ body {
     height: 100vh;
     z-index: -1; 
     pointer-events: none; 
-    filter: blur(12px); 
-    transform: scale(1.15); 
+    
+    /* Desfoque menor (5px) para conseguir ver a colheita no fundo */
+    filter: blur(5px); 
+    
+    /* Zoom maior (1.35) para empurrar as bordas pretas do YouTube para fora da tela */
+    transform: scale(1.35); 
 }
 
-/* --- DAQUI PARA BAIXO É O SEU CÓDIGO ANTIGO QUE FOI MANTIDO --- */
+/* --- SEU CÓDIGO DAS FOTOS E BOTÃO MANTIDO INTACTO --- */
 h1 {
     color: #71E86B; 
     font-size: 55px;
@@ -43,7 +47,7 @@ h1 {
 }
 
 .galeria img {
-    width: 320px; /* Mantive os tamanhos maiores que conversamos */
+    width: 320px; 
     height: 400px;
     object-fit: cover;
     background-color: #f4f4f0;
