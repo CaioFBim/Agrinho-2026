@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- ESTE É O CÓDIGO DO VÍDEO COM O DESFOQUE E ZOOM AJUSTADOS --- */
+/* --- CONFIGURAÇÃO DO VÍDEO DE FUNDO --- */
 .video-fundo {
     position: fixed;
     top: 0;
@@ -16,15 +16,11 @@ body {
     height: 100vh;
     z-index: -1; 
     pointer-events: none; 
-    
-    /* Desfoque menor (5px) para conseguir ver a colheita no fundo */
     filter: blur(5px); 
-    
-    /* Zoom maior (1.35) para empurrar as bordas pretas do YouTube para fora da tela */
     transform: scale(1.35); 
 }
 
-/* --- SEU CÓDIGO DAS FOTOS E BOTÃO MANTIDO INTACTO --- */
+/* --- TELA 1: ESTILOS DA PÁGINA INICIAL --- */
 h1 {
     color: #71E86B; 
     font-size: 55px;
@@ -73,3 +69,15 @@ h1 {
     cursor: pointer;
     box-shadow: 4px 4px 0px black; 
 }
+
+/* --- CLASSE QUE O JAVASCRIPT USA PARA ESCONDER AS TELAS --- */
+.escondida {
+    display: none !important;
+}
+
+/* --- TELA 2: ESTILOS DA NOVA PÁGINA (SECTION) --- */
+#secao-definicoes {
+    background-color: #8da9c4; /* O azul exato dos seus slides */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
