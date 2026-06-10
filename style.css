@@ -4,11 +4,11 @@ body {
     text-align: center;
     background-color: transparent; 
     margin: 0;
-    padding: 0; /* Removido daqui para a página 2 conseguir cobrir as bordas */
+    padding: 0;
     overflow-x: hidden;
 }
 
-/* O espaçamento protetor de 50px agora fica apenas na Tela 1 */
+/* O espaçamento padrão de 50px fica apenas na primeira tela */
 #home {
     padding: 50px;
 }
@@ -81,20 +81,20 @@ h1 {
     display: none !important;
 }
 
-/* --- TELA 2: ESTILOS DA SEGUNDA PÁGINA (CONTEÚDO AZUL) --- */
+/* --- TELA 2: ESTILOS DA SEGUNDA PÁGINA (CONTEÚDO AZUL TOTAL) --- */
 #secao-definicoes {
-    background-color: #8da9c4; /* O azul de preenchimento total */
+    background-color: #8da9c4; /* O azul cobrindo tudo de ponta a ponta */
     min-height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
-    color: white; /* Força todas as fontes a serem brancas */
+    color: white; /* Garante que todas as letras fiquem brancas nesta seção */
     position: relative;
-    z-index: 5; /* Joga a página para cima do vídeo fixo, tampando-o */
+    z-index: 5; /* Sobrevale ao vídeo de fundo, cobrindo-o por completo */
 }
 
 /* Mosaico posicionado perfeitamente no topo */
-.topo-mosaico {
+.galeria-topo {
     width: 100%;
     background-color: #8da9c4;
     display: flex;
@@ -103,20 +103,20 @@ h1 {
 
 .img-mosaico {
     width: 100%;
-    max-width: 1920px; /* Evita que estique excessivamente em monitores gigantes */
+    max-width: 1920px; 
     height: auto;
     display: block;
 }
 
-/* Container de textos */
+/* Espaçamento interno dos textos */
 .conteudo-definicoes {
     padding: 60px 12% 100px 12%;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* Alinhamento do slide */
+    text-align: left; /* Alinhamento à esquerda conforme solicitado */
 }
 
-/* 1º maior texto da página */
+/* 1º Maior texto da página */
 .titulo-principal-agro {
     font-size: 75px; 
     font-family: 'Arial Black', sans-serif;
@@ -126,7 +126,7 @@ h1 {
     color: white;
 }
 
-/* 2º maior texto da página */
+/* 2º Maior texto da página */
 .titulo-agricultura {
     font-size: 48px;
     font-family: 'Arial', sans-serif;
@@ -135,7 +135,7 @@ h1 {
     color: white;
 }
 
-/* Explicação (um pouco menor que o título de agricultura) */
+/* Explicação ligeiramente menor que o título de agricultura */
 .texto-explicacao p {
     font-size: 22px;
     line-height: 1.6;
@@ -143,7 +143,7 @@ h1 {
     color: white;
 }
 
-/* Referências bem pequenas lá embaixo */
+/* Referências bem pequenas no rodapé */
 .referencias-pequenas {
     margin-top: 70px;
     font-size: 12px;
